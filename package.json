@@ -28,11 +28,7 @@
     "io-ts": "^2.2.16",
     "joi": "^17.4.2",
     "lodash": "^4.17.21",
-    "mschema": "0.5.6",
-    "parambulator": "1.5.2",
     "validate.js": "^0.13.1",
-    "validator.js": "2.0.4",
-    "validatorjs": "^3.22.1",
     "yup": "^0.32.10",
     "zod": "^3.9.8"
   },

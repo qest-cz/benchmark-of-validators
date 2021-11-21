@@ -1,36 +1,36 @@
 Arguments: 
-  /home/cyril/.nvm/versions/node/v14.17.5/bin/node /usr/share/yarn/bin/yarn.js add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier slint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier
+  /home/cyril/.nvm/versions/node/v12.20.0/bin/node /usr/share/yarn/bin/yarn.js add -D @types/benchmarkify
 
 PATH: 
-  /home/cyril/.nvm/versions/node/v14.17.5/bin:/home/cyril/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/cyril/.nvm/versions/node/v12.20.0/bin:/home/cyril/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.22.5
 
 Node version: 
-  14.17.5
+  12.20.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/slint-import-resolver-typescript: Not found
+  Error: https://registry.yarnpkg.com/@types%2fbenchmarkify: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
-      at Request.emit (events.js:400:28)
+      at Request.emit (events.js:314:20)
       at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
-      at Request.emit (events.js:400:28)
+      at Request.emit (events.js:314:20)
       at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141643:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1317:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1241:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
-    "name": "nodejs-typescript-starter",
+    "name": "benchmark-of-validators",
     "version": "0.0.1",
-    "description": "Typescript starter pack for typescript/node.js development.",
+    "description": "Simple js validator benchmark.",
     "main": "index.js",
     "author": "Cyril Urban",
     "license": "MIT",
@@ -47,22 +47,17 @@ npm manifest:
       "clean": "concurrently 'rm -rf dist' 'rm -rf coverage'"
     },
     "dependencies": {
-      "dotenv": "^10.0.0",
-      "lodash": "^4.17.21",
       "ajv": "^8.6.3",
-      "benchmark": "2.1.4",
-      "chalk": "^4.1.2",
-      "fastest-validator": "^1.11.1",
-      "joi": "^17.4.2",
-      "mschema": "0.5.6",
-      "parambulator": "1.5.2",
-      "validate.js": "^0.13.1",
-      "validator.js": "2.0.4",
-      "validatorjs": "^3.22.1",
       "ajv-formats": "^2.1.1",
+      "benchmark": "2.1.4",
       "benchmarkify": "^3.0.0",
+      "chalk": "^4.1.2",
+      "dotenv": "^10.0.0",
       "fp-ts": "^2.11.4",
       "io-ts": "^2.2.16",
+      "joi": "^17.4.2",
+      "lodash": "^4.17.21",
+      "validate.js": "^0.13.1",
       "yup": "^0.32.10",
       "zod": "^3.9.8"
     },
@@ -76,6 +71,7 @@ npm manifest:
       "cross-env": "^7.0.3",
       "eslint": "^8.0.0",
       "eslint-config-prettier": "^8.3.0",
+      "eslint-import-resolver-typescript": "^2.5.0",
       "eslint-plugin-import": "^2.24.2",
       "eslint-plugin-prettier": "^4.0.0",
       "jest": "^27.2.5",
@@ -1713,6 +1709,17 @@ Lockfile:
       debug "^3.2.7"
       resolve "^1.20.0"
   
+  eslint-import-resolver-typescript@^2.5.0:
+    version "2.5.0"
+    resolved "https://registry.yarnpkg.com/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz#07661966b272d14ba97f597b51e1a588f9722f0a"
+    integrity sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ==
+    dependencies:
+      debug "^4.3.1"
+      glob "^7.1.7"
+      is-glob "^4.0.1"
+      resolve "^1.20.0"
+      tsconfig-paths "^3.9.0"
+  
   eslint-module-utils@^2.6.2:
     version "2.6.2"
     resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.6.2.tgz#94e5540dd15fe1522e8ffa3ec8db3b7fa7e7a534"
@@ -1937,11 +1944,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz#c406a83b6e70d9e35ce3b30a81141df30aeba884"
     integrity sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==
   
-  fastest-validator@^1.11.1:
-    version "1.11.1"
-    resolved "https://registry.yarnpkg.com/fastest-validator/-/fastest-validator-1.11.1.tgz#c0e158046294981834fcb309a6ef4aa70f521297"
-    integrity sha512-y0pXBCgGfY3mqbBL9sn2LtAxfJICyOr5cuOnCjyiKg4VoXVmDaLBDwnnj4QC1pSY5B4upln5k8RyLszlLXzXlw==
-  
   fastq@^1.6.0:
     version "1.13.0"
     resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
@@ -2069,13 +2071,6 @@ Lockfile:
       call-bind "^1.0.2"
       get-intrinsic "^1.1.1"
   
-  gex@0.2.2:
-    version "0.2.2"
-    resolved "https://registry.yarnpkg.com/gex/-/gex-0.2.2.tgz#2d409d2430959708da55cf56294c64f6d8973487"
-    integrity sha1-LUCdJDCVlwjaVc9WKUxk9tiXNIc=
-    dependencies:
-      lodash "3.10.0"
-  
   glob-parent@^5.1.2, glob-parent@~5.1.2:
     version "5.1.2"
     resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -2090,7 +2085,7 @@ Lockfile:
     dependencies:
       is-glob "^4.0.3"
   
-  glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
+  glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.7:
     version "7.2.0"
     resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
     integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
@@ -2990,11 +2985,6 @@ Lockfile:
     dependencies:
       minimist "^1.2.0"
   
-  jsonic@0.2.2:
-    version "0.2.2"
-    resolved "https://registry.yarnpkg.com/jsonic/-/jsonic-0.2.2.tgz#127bb99df4d821652c48a23d025cf2b16e618491"
-    integrity sha1-Enu5nfTYIWUsSKI9AlzysW5hhJE=
-  
   kleur@^3.0.3:
     version "3.0.3"
     resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
@@ -3065,16 +3055,6 @@ Lockfile:
     version "4.6.2"
     resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
     integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-  
-  lodash@3.10.0:
-    version "3.10.0"
-    resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.0.tgz#93d51c672828a4416a12af57220ba8a8737e2fbb"
-    integrity sha1-k9UcZygopEFqEq9XIguoqHN+L7s=
-  
-  lodash@4.5.0:
-    version "4.5.0"
-    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.5.0.tgz#2284aa06f5b136adbd954b903511b62fc39d1f59"
-    integrity sha1-IoSqBvWxNq29lUuQNRG2L8OdH1k=
   
   lodash@4.x, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
     version "4.17.21"
@@ -3186,11 +3166,6 @@ Lockfile:
     version "2.1.3"
     resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
     integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
-  
-  mschema@0.5.6:
-    version "0.5.6"
-    resolved "https://registry.yarnpkg.com/mschema/-/mschema-0.5.6.tgz#a1f385ecf96a2392c27ca1cbf239e17748982795"
-    integrity sha1-ofOF7PlqI5LCfKHL8jnhd0iYJ5U=
   
   nanoclone@^0.2.1:
     version "0.2.1"
@@ -3363,15 +3338,6 @@ Lockfile:
     version "2.2.0"
     resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
     integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
-  
-  parambulator@1.5.2:
-    version "1.5.2"
-    resolved "https://registry.yarnpkg.com/parambulator/-/parambulator-1.5.2.tgz#70cafab14546d1003cc53bde332e2f205c5cf89d"
-    integrity sha1-cMr6sUVG0QA8xTveMy4vIFxc+J0=
-    dependencies:
-      gex "0.2.2"
-      jsonic "0.2.2"
-      lodash "4.5.0"
   
   parent-module@^1.0.0:
     version "1.0.1"
@@ -4106,7 +4072,7 @@ Lockfile:
       source-map-support "^0.5.17"
       yn "3.1.1"
   
-  tsconfig-paths@^3.11.0:
+  tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
     version "3.11.0"
     resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.11.0.tgz#954c1fe973da6339c78e06b03ce2e48810b65f36"
     integrity sha512-7ecdYDnIdmv639mmDwslG6KQg1Z9STTz1j7Gcz0xa+nshh/gKDAHcPxRbWOsA3SPp0tXP2leTcY9Kw+NAkfZzA==
@@ -4232,16 +4198,6 @@ Lockfile:
     version "0.13.1"
     resolved "https://registry.yarnpkg.com/validate.js/-/validate.js-0.13.1.tgz#b58bfac04a0f600a340f62e5227e70d95971e92a"
     integrity sha512-PnFM3xiZ+kYmLyTiMgTYmU7ZHkjBZz2/+F0DaALc/uUtVzdCt1wAosvYJ5hFQi/hz8O4zb52FQhHZRC+uVkJ+g==
-  
-  validator.js@2.0.4:
-    version "2.0.4"
-    resolved "https://registry.yarnpkg.com/validator.js/-/validator.js-2.0.4.tgz#c9f72164aadb503a1a7be5b17b4beff3616e542e"
-    integrity sha512-6gknFyS1WrkXPlnpcb3hecx2LD4j8dEO+G9/yEJ3RYzUUtV4s3icO/IrAzTZtT9BHRSTNGRtg5JORIt+njMpIw==
-  
-  validatorjs@^3.22.1:
-    version "3.22.1"
-    resolved "https://registry.yarnpkg.com/validatorjs/-/validatorjs-3.22.1.tgz#13dbbe6556cf4ab87759105d13b1d31a9a54ce54"
-    integrity sha512-451KiCt/3E8qV/8fOUdO0YkA8zUdQBNVxubg9jvgEB+JAg9IlRKrClzwq2ir2ndj7TWmPYQ7bXFb4BxcyX2iWw==
   
   w3c-hr-time@^1.0.2:
     version "1.0.2"

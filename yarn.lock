@@ -1980,13 +1980,6 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
-gex@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/gex/-/gex-0.2.2.tgz#2d409d2430959708da55cf56294c64f6d8973487"
-  integrity sha1-LUCdJDCVlwjaVc9WKUxk9tiXNIc=
-  dependencies:
-    lodash "3.10.0"
-
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -2901,11 +2894,6 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-jsonic@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/jsonic/-/jsonic-0.2.2.tgz#127bb99df4d821652c48a23d025cf2b16e618491"
-  integrity sha1-Enu5nfTYIWUsSKI9AlzysW5hhJE=
-
 kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
@@ -2976,16 +2964,6 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-
-lodash@3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.0.tgz#93d51c672828a4416a12af57220ba8a8737e2fbb"
-  integrity sha1-k9UcZygopEFqEq9XIguoqHN+L7s=
-
-lodash@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.5.0.tgz#2284aa06f5b136adbd954b903511b62fc39d1f59"
-  integrity sha1-IoSqBvWxNq29lUuQNRG2L8OdH1k=
 
 lodash@4.x, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.7.0:
   version "4.17.21"
@@ -3097,11 +3075,6 @@ ms@^2.1.1:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
-
-mschema@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/mschema/-/mschema-0.5.6.tgz#a1f385ecf96a2392c27ca1cbf239e17748982795"
-  integrity sha1-ofOF7PlqI5LCfKHL8jnhd0iYJ5U=
 
 nanoclone@^0.2.1:
   version "0.2.1"
@@ -3274,15 +3247,6 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
-
-parambulator@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/parambulator/-/parambulator-1.5.2.tgz#70cafab14546d1003cc53bde332e2f205c5cf89d"
-  integrity sha1-cMr6sUVG0QA8xTveMy4vIFxc+J0=
-  dependencies:
-    gex "0.2.2"
-    jsonic "0.2.2"
-    lodash "4.5.0"
 
 parent-module@^1.0.0:
   version "1.0.1"
@@ -4143,16 +4107,6 @@ validate.js@^0.13.1:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/validate.js/-/validate.js-0.13.1.tgz#b58bfac04a0f600a340f62e5227e70d95971e92a"
   integrity sha512-PnFM3xiZ+kYmLyTiMgTYmU7ZHkjBZz2/+F0DaALc/uUtVzdCt1wAosvYJ5hFQi/hz8O4zb52FQhHZRC+uVkJ+g==
-
-validator.js@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/validator.js/-/validator.js-2.0.4.tgz#c9f72164aadb503a1a7be5b17b4beff3616e542e"
-  integrity sha512-6gknFyS1WrkXPlnpcb3hecx2LD4j8dEO+G9/yEJ3RYzUUtV4s3icO/IrAzTZtT9BHRSTNGRtg5JORIt+njMpIw==
-
-validatorjs@^3.22.1:
-  version "3.22.1"
-  resolved "https://registry.yarnpkg.com/validatorjs/-/validatorjs-3.22.1.tgz#13dbbe6556cf4ab87759105d13b1d31a9a54ce54"
-  integrity sha512-451KiCt/3E8qV/8fOUdO0YkA8zUdQBNVxubg9jvgEB+JAg9IlRKrClzwq2ir2ndj7TWmPYQ7bXFb4BxcyX2iWw==
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"
