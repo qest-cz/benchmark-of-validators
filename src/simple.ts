@@ -6,7 +6,8 @@ import * as p from 'io-ts/lib/PathReporter'
 import * as zod from 'zod'
 import * as validate from 'validate.js'
 import * as Joi from 'joi'
-import Ajv from 'ajv'
+import 'joi-extract-type'
+import Ajv, { Schema } from 'ajv'
 import ajvFormat from 'ajv-formats'
 import * as yup from 'yup'
 
@@ -37,6 +38,9 @@ const person = {
         bench.add('joi', () => {
             return schema.validate(person)
         })
+
+        // usage of type
+        // type Person = Joi.extractType<typeof schema>;
     })()
 
     // ---- yup ----
@@ -52,11 +56,14 @@ const person = {
         bench.add('yup', () => {
             return schema.isValid(person)
         })
+
+        // usage of type
+        // type Person = yup.Asserts<typeof schema>
     })()
 
     // ---- ajv ----
-    ; (() => {
-        const schema = {
+    ; (async () => {
+        const schema: Schema = {
             properties: {
                 name: { type: 'string', minLength: 4, maxLength: 25 },
                 email: { type: 'string', format: 'email' },
@@ -65,6 +72,7 @@ const person = {
                 age: { type: 'integer', minimum: 18 },
             },
             required: ['name', 'email', 'phone', 'age'],
+            additionalProperties: false,
         }
 
         const validate = ajv.compile(schema)
@@ -72,6 +80,25 @@ const person = {
         bench.add('ajv', () => {
             return validate(person)
         })
+
+        // usage of type - option 1
+        // const personType = await compile(schema, 'Person')
+        // console.log(personType)
+
+        // usage of type - option 2
+        // const schemaWithJtd = {
+        //     properties: {
+        //         name: { type: 'string' },
+        //         email: { type: 'string' },
+        //         phone: { type: 'string' },
+        //         age: { type: 'int32' },
+        //     },
+        //     optionalProperties: {
+        //         company: { type: 'string' },
+        //     },
+        // } as const
+
+        // type Person = JTDDataType<typeof schemaWithJtd>
     })()
 
     // ---- validate.js ----

@@ -28,6 +28,8 @@
     "fp-ts": "^2.11.4",
     "io-ts": "^2.2.16",
     "joi": "^17.4.2",
+    "joi-extract-type": "^15.0.8",
+    "json-schema-to-typescript": "^10.1.5",
     "lodash": "^4.17.21",
     "validate.js": "^0.13.1",
     "yup": "^0.32.10",
