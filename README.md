@@ -3,7 +3,8 @@
 Simple js validator benchmark
 
 - build with: `yarn build`
-- run with: `yarn benchmark`
+- run benchmark of simple object with: `yarn benchmark:simple`
+- run benchmark of complex object with: `yarn benchmark:complex`
 
 
 Results
@@ -33,4 +34,19 @@ Suite: Simple object
    io-ts             -78.33%      (1,973,238 rps)   (avg: 506ns)
    zod               -90.99%        (820,109 rps)   (avg: 1μs)
 -----------------------------------------------------------------------
+
+Suite: Complex object
+✔ joi                    26,548 rps
+✔ yup                    11,851 rps
+✔ ajv                 1,327,387 rps
+✔ validate.js            32,154 rps
+✔ io-ts                 233,786 rps
+✔ zod                    99,270 rps
+
+   joi                  -98%         (26,548 rps)   (avg: 37μs)
+   yup               -99.11%         (11,851 rps)   (avg: 84μs)
+   ajv                    0%      (1,327,387 rps)   (avg: 753ns)
+   validate.js       -97.58%         (32,154 rps)   (avg: 31μs)
+   io-ts             -82.39%        (233,786 rps)   (avg: 4μs)
+   zod               -92.52%         (99,270 rps)   (avg: 10μs)
 ```

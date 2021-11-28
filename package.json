@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "build:check": "tsc --noemit",
-    "benchmark": "node dist/src/index.js",
+    "benchmark:simple": "node dist/src/simple.js",
+    "benchmark:complex": "node dist/src/complex.js",
     "eslint:fix": "eslint . --fix --ext .ts",
     "eslint:check": "eslint . --quiet --ext  .ts",
     "test": "DOTENV_CONFIG_PATH=./config/.env.test jest",
